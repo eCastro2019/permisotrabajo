@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitud de Permiso - Comayagua</title>
+    <style>
+        @media print {
+            @page {
+                size: letter portrait;
+                margin: 0.5in;
+            }
+            #btn-imprimir {
+                display: none;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 95vh;       
+            align-items: center;
+            justify-content: center;
+            color: #003366;
+        }
+
+        h2, h3 {
+            text-align: center;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        td, th {
+            border: 1px solid #000;
+            padding: 3px;
+            text-align: center;
+            height: 20px;
+        }
+
+        .firma-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .firma {
+            width: 65%;
+            text-align: center;
+        }
+
+        .subdireccion {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #000;
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            height: 40px;
+            resize: none;
+        }
+
+        .checkbox-group {
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group input {
+            margin-right: 5px;
+        }
+
+        #btn-imprimir {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+        <img src="https://github.com/eCastro2019/_repDocument/blob/main/logo1.png?raw=true" alt="Logo Izquierdo" style="height: 80px;">
+        <h4 style="flex: 1; text-align: center; margin: 0;">
+            DIRECCION DEPARTAMENTAL DE EDUCACION DE COMAYAGUA
+        </h4>
+        <img src="https://github.com/eCastro2019/_repDocument/blob/main/logo2.png?raw=true" alt="Logo Derecho" style="height: 80px;">
+    </div>
+
+    <h3 class="titulo-permiso">
+        <span class="resaltado-permiso">TRABAJO FUERA DE OFICINA</span>
+    </h3>
+
+    <style>
+        .titulo-permiso {
+            color: #003366;
+            padding: 1px 0;
+            text-align: center;
+            margin: 0;
+        }
+        .resaltado-permiso {
+            background-color: #4fc3f7 !important; /* azul celeste más fuerte */
+            color: #003366 !important;            /* texto azul oscuro */
+            padding: 0 4px;
+        }
+        @media print {
+            .resaltado-permiso {
+                background-color: #4fc3f7 !important;
+                color: #003366 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+
+    <p>
+        Comayagua 
+        <input type="text" style="width: 60px;" placeholder="día" />
+        de 
+        <input type="text" style="width: 150px;" placeholder="mes" />
+        del 
+        <input type="text" style="width: 80px;" placeholder="año" />
+    </p>
+
+    <p>
+        Nombre Completo: <input type="text" placeholder="Escriba su nombre completo" />
+    </p>
+
+    <p>
+        Por medio del presente me permito comunicar ante usted que estaré laborando fuera de oficina:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>DÍA(S)</th>
+                <th>FECHA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td contenteditable="true"></td>
+                <td contenteditable="true"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Justifique la labor a desarrollar:</p>
+    <textarea placeholder="Describa brevemente la razón del permiso"></textarea>
+
+     <p>
+        Lugar: <input type="text" placeholder="Escriba el lugar donde realizara el trabajo" />
+    </p>
+
+    <div class="firma-section">
+        <div class="firma">
+            ___________________________<br>
+            Firma del Empleado
+        </div>
+        <div class="firma">
+            ___________________________<br>
+            VºBº Jefe de la Unidad
+        </div>
+    </div>
+
+    <div class="subdireccion">
+        ____________________________________<br>
+        Lic. David Antonio Bueso Escoto<br>
+        VºBº Sub Dirección de Talento Humano
+    </div>
+
+    <center style="margin-top: 20px;">
+        <button id="btn-imprimir" onclick="window.print()">🖨️ Imprimir</button>
+    </center>
+</body>
+</html>
